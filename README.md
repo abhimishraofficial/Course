@@ -30,7 +30,7 @@ This repository is for:
 
 ## 🧑‍🏫 Course Reference
 
-All materials follow the **Telusko YouTube course** and **project assignments**.
+All materials follow the **Telusko Udemy course** and **project assignments**.
 
 ---
 
