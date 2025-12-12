@@ -1,24 +1,25 @@
-import java.util.ArrayList;
-import java.util.List;      
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.TreeSet;
 
 public class Demo {
     public static void main(String[] args) throws InterruptedException {
-        List<Integer> nums  = new  ArrayList <Integer>();
-        nums.add(6);
-        nums.add(5);
-        nums.add(8);
-        nums.add(2);
+        Collection<Integer> nums  = new  TreeSet<Integer>();
+        nums.add(62);
+        nums.add(54);
+        nums.add(82);
+        nums.add(21);
         //nums.add("5");
-        System.out.println(nums.indexOf(5));
-        System.out.println(nums.get(2));
-
+        Iterator<Integer> values = nums.iterator();
+        while(values.hasNext())
+            System.out.println(values.next());
 
         // for(Object n : nums)
         //     {
-        //         int num = (Integer)n;
+               
 
-        //     System.out.println(num * 2);
-        }
+        //     System.out.println(n);
+        // }
        
     }
-    
+}
