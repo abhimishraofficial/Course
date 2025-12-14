@@ -1,25 +1,41 @@
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.TreeSet;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+class Student 
+{
+    int age;
+    String name;
+
+    public Student(int age, String name) {  
+        this.age = age;
+        this.name = name;
+    }
+
+    public String toString() {
+        return "student [age=" + age + ", name=" + name + "]";
+    }
+    
+    }
 
 public class Demo {
-    public static void main(String[] args) throws InterruptedException {
-        Collection<Integer> nums  = new  TreeSet<Integer>();
-        nums.add(62);
-        nums.add(54);
-        nums.add(82);
-        nums.add(21);
-        //nums.add("5");
-        Iterator<Integer> values = nums.iterator();
-        while(values.hasNext())
-            System.out.println(values.next());
+    public static void main(String[] args) {
+Comparator<Student> com = (i, j) -> i.age > j.age ? 1 : -1;
+     List<Student> studs = new ArrayList<>();
+   studs.add(new Student(21,"Navin"));
+   studs.add(new Student(12,"John"));
+   studs.add(new Student(18,"Parul"));
+   studs.add(new Student(20,"Kiran"));
+         Collections.sort(studs, com);
+        for(Student s: studs){
+            System.out.println(s);
+        }
 
-        // for(Object n : nums)
-        //     {
-               
 
-        //     System.out.println(n);
-        // }
-       
+
+     
     }
 }
+
